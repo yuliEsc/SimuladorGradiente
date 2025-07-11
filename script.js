@@ -110,6 +110,34 @@ dirCanvas.addEventListener("mousemove", (e) => {
     actualizar();
   }
 });
+dirCanvas.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  e.preventDefault();
+});
+
+dirCanvas.addEventListener("touchend", () => {
+  isDragging = false;
+});
+
+dirCanvas.addEventListener("touchcancel", () => {
+  isDragging = false;
+});
+
+dirCanvas.addEventListener("touchmove", (e) => {
+  if (isDragging) {
+    const rect = dirCanvas.getBoundingClientRect();
+    const touch = e.touches[0];
+    const mx = touch.clientX - rect.left;
+    const my = touch.clientY - rect.top;
+
+    const puntoX = mx - centerX;
+    const puntoY = my - centerY;
+
+    angulo = Math.atan2(puntoY, puntoX);
+    actualizar();
+    e.preventDefault(); // evita el scroll al tocar
+  }
+});
 
 const tooltip = document.getElementById("tooltip");
 
