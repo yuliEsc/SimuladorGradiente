@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degradado de una imagen</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+<link rel="manifest" href="./images/site.webmanifest">
+</head>
+<body>
+    <header>
+        <h2>Simulador de Degradado</h2>
+        <p>Escalante Yuliana</p>
+    </header>
+    <section>
+        <div class="box"><canvas id="lienzo" width="240" height="240"></canvas></div>
+    
+    <div class="seccion">
+        <div class="box">
+            <p>Arrastrá la flecha para cambiar la dirección:</p>
+            <canvas id="direccion" width="100" height="100" style="border-radius: 10px;  cursor: pointer;"></canvas>
+         </div>
+         <div class="box" id="infoGradiente" style=""></div>
+    </div>
+    <div id="tooltip"></div>
+    
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
