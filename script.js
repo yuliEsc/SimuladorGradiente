@@ -77,7 +77,15 @@ function actualizar() {
   ∂F/∂y = sin(θ) = ${puntoY.toFixed(2)}<br>
   <strong>Gradiente:</strong> ∇F = (${puntoX.toFixed(2)}, ${puntoY.toFixed(2)})`;
 
+  const grados = (angulo * 180 / Math.PI + 360) % 360; // para que siempre esté entre 0° y 360°
 
+document.getElementById("infoGradiente").innerHTML = `
+  <strong>Ángulo de dirección:</strong> θ = ${grados.toFixed(1)}°<br>
+  <strong>Derivadas parciales:</strong><br>
+  ∂f/∂x = cos(θ) = ${puntoX.toFixed(2)}<br>
+  ∂f/∂y = sin(θ) = ${puntoY.toFixed(2)}<br>
+  <strong>Gradiente:</strong> ∇f = (${puntoX.toFixed(2)}, ${puntoY.toFixed(2)})
+`;
 }
 
 actualizar();
